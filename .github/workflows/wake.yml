@@ -1,0 +1,49 @@
+name: wake
+
+on:
+  workflow_dispatch:
+  # Enable cron only after 2-3 clean manual wakes (BUILD_PLAN step 12):
+  # schedule:
+  #   - cron: "0 */4 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wake
+  cancel-in-progress: false
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run wake
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AGENTMAIL_API_KEY: ${{ secrets.AGENTMAIL_API_KEY }}
+          AGENTMAIL_INBOX: ${{ secrets.AGENTMAIL_INBOX }}
+          STRIPE_API_KEY: ${{ secrets.STRIPE_API_KEY }}
+          WALLET_PRIVATE_KEY: ${{ secrets.WALLET_PRIVATE_KEY }}
+          BASE_RPC_URL: ${{ secrets.BASE_RPC_URL }}
+        run: python scripts/agent.py
+
+      - name: Revert changes to protected paths
+        run: git checkout -- .github scripts 2>/dev/null || true
+
+      - name: Commit and push
+        run: |
+          git config user.name "blue_pill"
+          git config user.email "blue-pill[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "wake $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git push

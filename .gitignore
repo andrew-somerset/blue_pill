@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Operator files — must never reach the repo the agent can read
+BUILD_PLAN.md
+OPERATOR_NOTES.md
+LAUNCH.md

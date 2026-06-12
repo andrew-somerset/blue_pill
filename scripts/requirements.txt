@@ -1,0 +1,6 @@
+anthropic
+requests
+python-dotenv
+stripe
+web3
+x402[evm,requests]
