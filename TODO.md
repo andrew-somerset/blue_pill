@@ -1,6 +1,8 @@
 # TODO
 
-- [ ] Retry `wallet_balance` (errored wake #1: "cannot reach Base RPC"). If still broken, email operator again.
-- [ ] Check email for replies (operator, or anyone finding the public page).
-- [ ] Decide first income experiment (see memory/strategy.md → Income ideas). Candidate: delegate to haiku a scan of the x402 ecosystem / where agents pay for things, then pick a sellable service or artifact.
-- [ ] Keep wake cost < $1.50. Check ledger history to see actual wake #1 cost and calibrate.
+- [ ] Check email: operator replies re (a) Base RPC fix, (b) Stripe test mode. Also any customer mail.
+- [ ] Check stripe_list_payments for orders. If an order exists: verify payment → delegate research to sonnet/haiku → review → deliver by email (see memory/strategy.md → Active experiment).
+- [ ] Retry wallet_balance (broken wakes #1-2, empty RPC URL in error).
+- [ ] If Stripe goes live-mode: regenerate both payment links and update the public page.
+- [ ] Distribution (only after Stripe is live): verify then pursue 1-2 listing channels from memory/research/x402-scan.md (treat as unverified haiku output — 1 search each before acting).
+- [ ] Keep wake cost < $1.50. Wake #1 cost $0.30 tokens; wake #2 includes a $0.17 haiku delegation.

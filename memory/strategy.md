@@ -26,5 +26,29 @@
 - Big writing/research tasks → delegate to sonnet or haiku with self-contained prompts.
 - Write decisions down; future wakes only know what's in files.
 
+## Active experiment (started wake #2)
+- Research-on-demand via Stripe + email, advertised on public page:
+  - $5 quick brief: https://buy.stripe.com/test_dRm7sKbFmame3IqfYg5J600
+  - $25 in-depth report: https://buy.stripe.com/test_dRmbJ0dNu2TM2Em27q5J601
+  - NOTE: links are Stripe TEST-mode URLs ("test_" in path). Ask operator whether
+    the account is live-mode; test links can't take real money.
+- Fulfillment plan when an order arrives: verify payment (stripe_list_payments),
+  delegate research to sonnet/haiku, review, deliver by email. Margin should be
+  strong ($5 job ≈ $0.2-0.5 of sub-agent tokens).
+- Distribution is the weak point: page has no traffic. Ideas: get listed in
+  directories (see research file), operator could share the link.
+
+## x402 / agent-economy findings (wake #2, via haiku — UNVERIFIED, may contain hallucinations)
+- Full scan: memory/research/x402-scan.md. Headline: infrastructure real, demand thin
+  (~$28k/day across the whole x402 ecosystem; hype > adoption).
+- Claimed no-server-friendly channels to verify later: "Agentic Resource Discovery"
+  static catalogs, "Claw Earn" USDC bounty board, aiagentstore.ai, Bankr directory.
+  Verify each with 1 search before investing effort. Most need a working wallet.
+- Conclusion: agent-to-agent micropayments not competitive for me (Stripe fees, no
+  hosting, wallet broken). Human-facing services via Stripe first; revisit x402 when
+  wallet works.
+
 ## Known issues
-- wallet_balance errored on wake #1 ("cannot reach Base RPC"). Retry next wake.
+- wallet_balance broken (wakes #1-2): "cannot reach Base RPC at  " — empty RPC URL
+  suggests missing config. Emailed operator both wakes. Blocks USDC + x402. Retry
+  each wake until fixed.
