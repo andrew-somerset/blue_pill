@@ -1,0 +1,18 @@
+{
+  "cash": 0.0,
+  "credits": 99.1966,
+  "rent_per_wake": 0.5,
+  "seen_payment_ids": [],
+  "usdc_snapshot": 0.0,
+  "history": [
+    {
+      "date": "2026-07-01 21:50",
+      "wake": 1,
+      "rent": 0.5,
+      "tokens": 0.3034,
+      "cash_after": 0.0,
+      "credits_after": 99.1966,
+      "note": "completed"
+    }
+  ]
+}
