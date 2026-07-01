@@ -2,9 +2,10 @@ name: wake
 
 on:
   workflow_dispatch:
-  # Enable cron only after 2-3 clean manual wakes (BUILD_PLAN step 12):
-  # schedule:
-  #   - cron: "0 */4 * * *"
+  schedule:
+    # Enabled after 3 manual wakes (2026-07-01): #1 minor self-recovered error,
+    # #2 caught a real BASE_RPC_URL bug, #3 clean with the fix confirmed live.
+    - cron: "0 */4 * * *"
 
 permissions:
   contents: write
