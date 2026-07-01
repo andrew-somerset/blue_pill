@@ -281,7 +281,9 @@ def _wallet_account():
 
 def _w3():
     from web3 import Web3
-    rpc = os.environ.get("BASE_RPC_URL", BASE_RPC_DEFAULT)
+    # `or` (not .get's default arg) because CI sets this var to "" when the
+    # optional BASE_RPC_URL secret isn't configured, rather than omitting it.
+    rpc = os.environ.get("BASE_RPC_URL") or BASE_RPC_DEFAULT
     last_err = None
     for attempt in range(3):
         if attempt:
