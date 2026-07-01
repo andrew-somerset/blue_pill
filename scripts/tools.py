@@ -8,6 +8,7 @@ import json
 import os
 import re
 import subprocess
+import time
 from pathlib import Path
 
 import requests
@@ -281,10 +282,18 @@ def _wallet_account():
 def _w3():
     from web3 import Web3
     rpc = os.environ.get("BASE_RPC_URL", BASE_RPC_DEFAULT)
-    w3 = Web3(Web3.HTTPProvider(rpc, request_kwargs={"timeout": 25}))
-    if not w3.is_connected():
-        raise RuntimeError(f"cannot reach Base RPC at {rpc}")
-    return w3
+    last_err = None
+    for attempt in range(3):
+        if attempt:
+            time.sleep(2 * attempt)  # 2s, then 4s
+        try:
+            w3 = Web3(Web3.HTTPProvider(rpc, request_kwargs={"timeout": 25}))
+            if w3.is_connected():
+                return w3
+        except Exception as e:
+            last_err = e
+    detail = f" ({last_err})" if last_err else ""
+    raise RuntimeError(f"cannot reach Base RPC at {rpc} after 3 attempts{detail}")
 
 
 def wallet_address() -> str:

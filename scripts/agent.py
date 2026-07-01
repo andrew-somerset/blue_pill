@@ -27,7 +27,7 @@ from tools import REPO_ROOT, TOOL_SPECS, run_tool
 
 MAIN_MODEL = "claude-fable-5"
 DELEGATE_MODELS = {
-    "sonnet": "claude-sonnet-4-6",
+    "sonnet": "claude-sonnet-5",
     "haiku": "claude-haiku-4-5-20251001",
 }
 
@@ -35,7 +35,7 @@ DELEGATE_MODELS = {
 # cache reads 0.1x input.
 PRICES = {
     "claude-fable-5": (10.00, 50.00),
-    "claude-sonnet-4-6": (3.00, 15.00),
+    "claude-sonnet-5": (3.00, 15.00),
     "claude-haiku-4-5-20251001": (1.00, 5.00),
 }
 PRICE_PER_WEB_SEARCH = 0.01
