@@ -2,8 +2,14 @@ name: wake
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 */4 * * *"
+  # Paused 2026-07-02 by operator: Stripe account under review, payments
+  # blocked pending that (not a code/config issue — see TODO.md operator
+  # note). Resuming from current state, no reset, once review clears.
+  # Also disabled at the GitHub level (`gh workflow disable wake.yml`).
+  # Re-enable both to resume:
+  #   gh workflow enable wake.yml
+  # schedule:
+  #   - cron: "0 */4 * * *"
 
 permissions:
   contents: write
