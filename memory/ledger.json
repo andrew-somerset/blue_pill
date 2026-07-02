@@ -1,36 +1,8 @@
 {
   "cash": 0.0,
-  "credits": 97.1247,
+  "credits": 100.0,
   "rent_per_wake": 0.5,
   "seen_payment_ids": [],
   "usdc_snapshot": 0.0,
-  "history": [
-    {
-      "date": "2026-07-01 21:50",
-      "wake": 1,
-      "rent": 0.5,
-      "tokens": 0.3034,
-      "cash_after": 0.0,
-      "credits_after": 99.1966,
-      "note": "completed"
-    },
-    {
-      "date": "2026-07-01 22:04",
-      "wake": 2,
-      "rent": 0.5,
-      "tokens": 0.8207,
-      "cash_after": 0.0,
-      "credits_after": 97.8759,
-      "note": "completed"
-    },
-    {
-      "date": "2026-07-01 22:08",
-      "wake": 3,
-      "rent": 0.5,
-      "tokens": 0.2512,
-      "cash_after": 0.0,
-      "credits_after": 97.1247,
-      "note": "completed"
-    }
-  ]
+  "history": []
 }
