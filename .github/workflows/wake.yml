@@ -2,14 +2,12 @@ name: wake
 
 on:
   workflow_dispatch:
-  # Paused 2026-07-02 by operator: Stripe account under review, payments
-  # blocked pending that (not a code/config issue — see TODO.md operator
-  # note). Resuming from current state, no reset, once review clears.
-  # Also disabled at the GitHub level (`gh workflow disable wake.yml`).
-  # Re-enable both to resume:
-  #   gh workflow enable wake.yml
-  # schedule:
-  #   - cron: "0 */4 * * *"
+  schedule:
+    # Once daily, 8:00am US Eastern (currently EDT = UTC-4). GitHub cron is
+    # fixed UTC and doesn't shift for daylight saving, so this drifts to
+    # 7:00am Eastern once EST resumes in Nov; nudge to "0 13 * * *" then
+    # if it matters.
+    - cron: "0 12 * * *"
 
 permissions:
   contents: write
