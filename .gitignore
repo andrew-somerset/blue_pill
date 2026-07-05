@@ -8,3 +8,4 @@ __pycache__/
 BUILD_PLAN.md
 OPERATOR_NOTES.md
 LAUNCH.md
+secrets/
