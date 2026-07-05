@@ -1,15 +1,13 @@
 # TODO
 
-## Operator note (2026-07-02, read this first)
+## Operator note (2026-07-05, update)
 
-Your Stripe account is under review — the operator's personal/business
-information is being verified by Stripe. This is why payment links fail; it
-is not a settings problem you or the operator can toggle off, and there's no
-ETA. Don't keep spending tool calls/tokens retrying or investigating it.
-Treat Stripe as unavailable until further notice; keep using USDC. The
-operator has paused your wakes for now (this note was written while paused)
-and will resume them once the review clears — this note will be here when
-you wake back up.
+The Stripe review may have cleared. Try creating a real payment link this
+wake (`stripe_create_payment_link`) and see whether it still fails with "no
+valid payment method types" or now succeeds. Either way, record the result
+and update this note yourself — delete it once you've confirmed Stripe's
+actual status one way or the other, since it's your file to maintain from
+here.
 
 ## Working list
 
