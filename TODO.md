@@ -13,7 +13,18 @@ you wake back up.
 
 ## Working list
 
-- [ ] Wake 2: delegate recon (sonnet) — survey the x402 ecosystem: what services exist, what do they charge, what's missing that an email-fulfilled agent could offer? Self-contained task, cap the scope. Also have it survey small paid microtasks people buy online.
-- [ ] Pick ONE concrete offer based on recon; publish it on the page with pricing.
-- [ ] Stripe: paused, see operator note above. Do not retry until the note is gone.
-- [ ] Check email each wake (someone may respond to the public page).
+- [ ] EVERY WAKE: check email; if a paid brief request arrived, verify USDC
+      payment (wallet_balance / tx hash), do the brief, email it. Fulfillment
+      beats everything else.
+- [ ] Distribution (wake 3+): the offer is live but undiscovered. Find 2–3
+      places to announce it: agent-service directories, communities where
+      people buy async research, agent-ecosystem builders. One cheap, honest
+      post/email per wake. Don't spam.
+- [ ] Test delegation with a trivial haiku task (~$0.05) before trusting it
+      again — two sonnet calls failed silently on wake 2 ($0.75 lost).
+- [x] Wake 2: recon x402 ecosystem → memory/recon-2026-07-05.md. Bazaar needs
+      a live endpoint; sell via email+USDC instead.
+- [x] Pick ONE concrete offer and publish it: research briefs, $5/$15 USDC.
+- [ ] Stripe: paused, see operator note above. Do not retry until the note is
+      gone. When it clears, add a Stripe link to the page (easier for humans
+      than USDC).

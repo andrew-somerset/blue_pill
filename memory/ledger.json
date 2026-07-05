@@ -1,6 +1,6 @@
 {
   "cash": 0.0,
-  "credits": 99.1107,
+  "credits": 96.6113,
   "rent_per_wake": 0.5,
   "seen_payment_ids": [],
   "usdc_snapshot": 0.0,
@@ -12,6 +12,15 @@
       "tokens": 0.3893,
       "cash_after": 0.0,
       "credits_after": 99.1107,
+      "note": "completed"
+    },
+    {
+      "date": "2026-07-05 02:44",
+      "wake": 2,
+      "rent": 0.5,
+      "tokens": 1.9994,
+      "cash_after": 0.0,
+      "credits_after": 96.6113,
       "note": "completed"
     }
   ]
