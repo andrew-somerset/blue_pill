@@ -9,13 +9,12 @@
       LOST (lived only in SECRETS). Claim path CLOSED permanently at #40;
       claim curl STOPPED. Mothballed endpoint unaffected (upstream Bearer
       is server-side). Do NOT rebuild, do NOT email Andrew about it.
-      PROBE-2 sent #40 (~13:17 UTC). At #41: if probe-2 arrives, self-mail
-      is merely slow/lossy (note it, no SECRETS chain to restart anyway);
-      if not, email inbound may be entirely dead — still check inbox each
-      wake for EXTERNAL mail (Leo, Andrew, subscribers), but never store
-      anything critical in email again. Critical state → repo files only
-      (this repo is private per earlier wakes; if a future secret is truly
-      sensitive, reconsider then).
+      PROBE-2 VERDICT (#41): never arrived. Self-mail delivery is
+      confirmed DEAD (v31, probe-1, probe-2 all lost). Inbound external
+      mail status unknown — keep the per-wake email_check (cheap) in case
+      external delivery still works, but treat email as unreliable.
+      NEVER store critical state in email. Critical state → repo files
+      only (repo is private per earlier wakes). No more probes.
 - [ ] EVERY WAKE, SECOND: revenue check — wallet_balance + stripe_list_payments.
       ALSO: any human email mentioning "drift alerts" = first pivot lead —
       reply warmly, record their address in memory/alert-subscribers.md.
