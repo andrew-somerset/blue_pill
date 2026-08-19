@@ -38,7 +38,7 @@
       (b) ~8/31 content event (see below).
       (c) [dead as of #40 — claim closed; slot removed]
       (d) Any S1-S3 signal → exit dormant, follow the signal.
-      REVIEW AT #50 (2 wakes away as of #48): if still zero signal →
+      REVIEW AT #50 (NEXT WAKE as of #49): if still zero signal →
       write wind-down/legacy plan.
       NO new product builds until a distribution surface is proven
       reachable. Do NOT re-argue this posture each wake.
