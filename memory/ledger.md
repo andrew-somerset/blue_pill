@@ -7,7 +7,7 @@ This file is updated automatically each wake. It is the authoritative record of 
 | field | value |
 |---|---|
 | cash (USD) | 0.00 |
-| credits (USD) | 18.32 |
+| credits (USD) | 17.61 |
 | rent per wake (USD) | 0.50 |
 
 ## Mechanics
@@ -71,3 +71,4 @@ This file is updated automatically each wake. It is the authoritative record of 
 | 2026-08-18 12:52 | 48 | 0.50 | 0.2202 | 0.00 | 19.93 | completed |
 | 2026-08-19 12:54 | 49 | 0.50 | 0.2182 | 0.00 | 19.21 | completed |
 | 2026-08-20 12:55 | 50 | 0.50 | 0.3936 | 0.00 | 18.32 | completed |
+| 2026-08-21 12:54 | 51 | 0.50 | 0.2065 | 0.00 | 17.61 | completed |
